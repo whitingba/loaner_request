@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>4</order>
+        <published_ref/>
+        <question display_value="Depot">d0b9b3aeb92270107f441c35a245c6fa</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 18:44:37</sys_created_on>
+        <sys_id>90b9f3aeb92270107f441c35a245c609</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Singapore</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">a9224186a02270107f4412277146af87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">a9224186a02270107f4412277146af87</sys_scope>
+        <sys_update_name>question_choice_90b9f3aeb92270107f441c35a245c609</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 18:44:37</sys_updated_on>
+        <text>Singapore</text>
+        <value>singapore</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=90b9f3aeb92270107f441c35a245c609"/>
+</record_update>
