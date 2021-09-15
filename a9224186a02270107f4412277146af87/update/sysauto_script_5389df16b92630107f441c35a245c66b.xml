@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>Loaner Item Reminder</name>
+        <offset/>
+        <offset_type/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 01:00:00</run_period>
+        <run_start>2021-09-14 21:45:43</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[//access the Loaner Request Table record
+var gr = new GlideRecord('x_cdltd_loaner_req_loaner_request');
+
+//grab the reminder leadTime, set in the system as 24 hours, however, if nothing is in the system, use 24 hours) time express in milliseconds
+var reminderLeadTime = gs.getProperty('x_cdltd_loaner_req.return.remindtime',24) * 60 * 60 * 1000;
+
+
+
+var rightNow = new GlideDateTime();
+rightNow.add(reminderLeadTime);
+
+//as long as the state is "Checked out", 
+gr.addQuery('state', 17);
+//is 
+gr.addQuery('return_reminder', '');
+//
+gr.addQuery('end_date', '<', rightNow);
+//execute the query
+gr.query();
+
+while (gr.next()) {
+	//grab end date
+var endTime = new GlideDateTime(gr.getValue('end_date'));
+//and subtract the 24 hour lead time from it to get the remind Time
+var remindTime = endTime;
+	remindTime.subtract(reminderLeadTime);
+	//set the return_reminder field to the value of remindTime set previously.
+	gr.setValue('return_reminder', remindTime);
+	
+	gr.update();
+	//???Execute the event queue item???
+	gs.eventQueue('x_cdltd_loaner_req.reminder',gr,gr.number,gs.getUserName());
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 22:09:40</sys_created_on>
+        <sys_id>5389df16b92630107f441c35a245c66b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Loaner Item Reminder</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">a9224186a02270107f4412277146af87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">a9224186a02270107f4412277146af87</sys_scope>
+        <sys_update_name>sysauto_script_5389df16b92630107f441c35a245c66b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 02:49:43</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

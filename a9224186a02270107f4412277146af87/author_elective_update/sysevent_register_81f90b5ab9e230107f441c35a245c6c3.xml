@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="DELETE">
+        <caller_access/>
+        <description>Used to trigger an email to remind the user to return their loaner item</description>
+        <event_name>x_cdltd_loaner_req.reminder</event_name>
+        <fired_by>Scheduled Script Execution: Loaner Item Due Reminder</fired_by>
+        <queue/>
+        <suffix>reminder</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 20:38:18</sys_created_on>
+        <sys_id>81f90b5ab9e230107f441c35a245c6c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_loaner_req.reminder</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">a9224186a02270107f4412277146af87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">a9224186a02270107f4412277146af87</sys_scope>
+        <sys_update_name>sysevent_register_81f90b5ab9e230107f441c35a245c6c3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 20:38:18</sys_updated_on>
+        <table>x_cdltd_loaner_req_loaner_request</table>
+    </sysevent_register>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Loaner Request">a9224186a02270107f4412277146af87</application>
+        <file_path/>
+        <instance_id>6caf57251be6b014d676c99f034bcbe8</instance_id>
+        <instance_name>adf-sep-305-dev-001</instance_name>
+        <name>sysevent_register_81f90b5ab9e230107f441c35a245c6c3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register"><sysevent_register action="INSERT_OR_UPDATE"><caller_access/><description>Used to trigger an email to remind the user to return their loaner item</description><event_name>x_cdltd_loaner_req.reminder</event_name><fired_by>Scheduled Script Execution: Loaner Item Due Reminder</fired_by><queue/><suffix>reminder</suffix><sys_class_name>sysevent_register</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-14 20:38:18</sys_created_on><sys_id>81f90b5ab9e230107f441c35a245c6c3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_cdltd_loaner_req.reminder</sys_name><sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">a9224186a02270107f4412277146af87</sys_package><sys_policy/><sys_scope display_value="Loaner Request">a9224186a02270107f4412277146af87</sys_scope><sys_update_name>sysevent_register_81f90b5ab9e230107f441c35a245c6c3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-14 20:38:18</sys_updated_on><table>x_cdltd_loaner_req_loaner_request</table></sysevent_register></record_update>]]></payload>
+        <payload_hash>-1013293579</payload_hash>
+        <record_name>x_cdltd_loaner_req.reminder</record_name>
+        <reverted_from/>
+        <source>39268dc6a02270107f4412277146afda</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 20:38:18</sys_created_on>
+        <sys_id>b31a0b1ab9e230107f441c35a245c651</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17be60825760000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 20:38:18</sys_updated_on>
+        <type>Event Registration</type>
+        <update_guid>fb1a0b1ab2e23010386ea7cf0fd13950</update_guid>
+        <update_guid_history>fb1a0b1ab2e23010386ea7cf0fd13950:-1013293579</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 21:38:35</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_register">sysevent_register</sys_db_object>
+        <sys_id>7cb85db0645a464e8a3849ae143e7164</sys_id>
+        <sys_metadata>81f90b5ab9e230107f441c35a245c6c3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_loaner_req.reminder</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">a9224186a02270107f4412277146af87</sys_package>
+        <sys_parent display_value="Loaner Request">6e234d86a02270107f4412277146af3c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">a9224186a02270107f4412277146af87</sys_scope>
+        <sys_scope_delete display_value="">595298d5b07d456aa508d4cbebd97669</sys_scope_delete>
+        <sys_update_name>sysevent_register_81f90b5ab9e230107f441c35a245c6c3</sys_update_name>
+        <sys_update_version display_value="sysevent_register_81f90b5ab9e230107f441c35a245c6c3">b31a0b1ab9e230107f441c35a245c651</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 21:38:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
